@@ -19,6 +19,12 @@ intellij {
     plugins.set(listOf(/* Plugin Dependencies */))
 }
 
+dependencies {
+    implementation("com.fifesoft:rsyntaxtextarea:3.3.2")
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
+    implementation("com.squareup.okhttp3:okhttp-sse:4.10.0")
+}
+
 tasks {
     // Set the JVM compatibility versions
     withType<JavaCompile> {
