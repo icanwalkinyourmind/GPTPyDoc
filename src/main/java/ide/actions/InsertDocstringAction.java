@@ -1,8 +1,6 @@
 package ide.actions;
 
 import com.intellij.openapi.actionSystem.*;
-import com.intellij.openapi.application.ApplicationManager;
-import com.intellij.openapi.editor.Caret;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.psi.*;
@@ -10,9 +8,6 @@ import com.intellij.psi.util.*;
 import com.intellij.psi.PsiMethod;
 import com.intellij.openapi.command.WriteCommandAction;
 import org.jetbrains.annotations.*;
-
-import javax.swing.*;
-import java.awt.event.*;
 
 public class InsertDocstringAction extends AnAction {
     @Override
