@@ -1,4 +1,4 @@
-package settings;
+package ide.settings;
 
 import com.intellij.ui.components.JBTextField;
 import com.intellij.util.ui.FormBuilder;

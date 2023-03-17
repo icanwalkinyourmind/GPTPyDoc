@@ -1,4 +1,4 @@
-package settings;
+package ide.settings;
 
 import com.intellij.openapi.options.Configurable;
 import org.jetbrains.annotations.Nls;

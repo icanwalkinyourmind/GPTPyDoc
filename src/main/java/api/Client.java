@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import org.json.JSONObject;
-import settings.Settings;
+import ide.settings.Settings;
 
 public class Client {
     public String get_answer(String prompt) throws Exception {

@@ -26,4 +26,8 @@
     <extensions defaultExtensionNs="com.intellij">
 
     </extensions>
+    <actions>
+        <action id="ide.actions.InsertDocstringAction" class="ide.actions.InsertDocstringAction" text="InsertDocsting "
+                description="This action adds docstrings to methods"/>
+    </actions>
 </idea-plugin>

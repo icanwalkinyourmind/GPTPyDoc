@@ -1,4 +1,4 @@
-package settings;
+package ide.settings;
 
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.util.xmlb.XmlSerializerUtil;
