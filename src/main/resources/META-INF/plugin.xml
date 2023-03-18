@@ -20,6 +20,8 @@
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+    <depends>com.intellij.modules.python</depends>
 
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
@@ -27,7 +29,10 @@
 
     </extensions>
     <actions>
-        <action id="ide.actions.InsertDocstringAction" class="ide.actions.InsertDocstringAction" text="InsertDocsting "
-                description="This action adds docstrings to methods"/>
+        <action id="ide.actions.InsertDocstringAction" class="ide.actions.InsertDocstringAction" text="InsertDocstring"
+                description="Insert docsting">
+            <add-to-group group-id="EditorPopupMenu1.FindRefactor" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="alt I"/>
+        </action>
     </actions>
 </idea-plugin>
