@@ -5,7 +5,10 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.psi.*;
 import com.intellij.psi.util.*;
-import com.intellij.psi.PsiMethod;
+import com.jetbrains.python.psi.PyClass;
+import com.jetbrains.python.psi.PyFunction;
+import com.intellij.psi.PsiElement;
+import com.jetbrains.python.psi.StructuredDocString;
 import com.intellij.openapi.command.WriteCommandAction;
 import org.jetbrains.annotations.*;
 
@@ -21,7 +24,7 @@ public class InsertDocstringAction extends AnAction {
 
         // Get the selected method
         PsiElement element = PsiUtilBase.getElementAtCaret(editor);
-        PsiMethod method = PsiTreeUtil.getParentOfType(element, PsiMethod.class);
+        PyFunction method = PsiTreeUtil.getParentOfType(element, PyFunction.class);
         if (method == null) {
             return;
         }
@@ -32,10 +35,10 @@ public class InsertDocstringAction extends AnAction {
                 " */";
 
         // Add the docstring to the method
-        WriteCommandAction.runWriteCommandAction(project, () -> {
-            PsiComment comment = PsiElementFactory.getInstance(project).createCommentFromText(docstring, method);
-            method.addBefore(comment, method.getFirstChild());
-        });
+        //WriteCommandAction.runWriteCommandAction(project, () -> {
+        //    PsiComment comment = PsiElementFactory.getInstance(project).createCommentFromText(docstring, method);
+        //    method.addBefore(comment, method.getFirstChild());
+       // });
     }
 
 }

@@ -1,0 +1,23 @@
+plugins {
+    id 'org.jetbrains.intellij' version '1.13.2'
+}
+
+group 'org.blackstartx'
+version '2022.3'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.json', name: 'json', version: '20220924'
+}
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+    plugins = ["python-ce"]
+    version = "2022.3.3"
+    type = 'PC'
+}
+patchPluginXml {
+}
